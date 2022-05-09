@@ -10,3 +10,11 @@ cd mrtrix3
 ./configure
 ./build
 ./set_path
+
+python2 /root/persistent/fslinstaller602.py
+
+# Extra for FSL
+FSLDIR=/root/installers/fsl
+. ${FSLDIR}/etc/fslconf/fsl.sh
+PATH=${FSLDIR}/bin:${PATH}
+export FSLDIR PATH
