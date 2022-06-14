@@ -23,7 +23,7 @@ EOF
 # ----------------------------------------------------------------------------------------
 
 ### install various libraries
-apt-get upgrade
+apt-get -y update
 apt-get install -y git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
 apt-get install -y bc 
 apt-get install -y binutils 
