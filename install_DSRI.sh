@@ -98,7 +98,7 @@ apt-get install -y dirmngr gnupg apt-transport-https ca-certificates software-pr
 apt-get install -y r-base 
 apt-get install -y r-cran-devtools
 apt-get install -y gdebi-core
-curl -o /root/persistent/rstudio-2022.02.3-492-amd64.deb https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.02.3-492-amd64.deb
+curl -o /root/persistent/rstudio-2022.02.3-492-amd64.deb https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.3-492-amd64.deb
 gdebi rstudio-2022.02.3-492-amd64.deb
 
 apt-get install -y git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
