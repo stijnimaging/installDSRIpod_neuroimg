@@ -78,9 +78,6 @@ apt-add-repository universe
 apt update
 apt install -y python2-minimal
 
-### install R
-apt-get install -y r-base 
-apt-get install -y r-cran-devtools
 
 # ##install cmake
 # wget --no-clobber --directory-prefix=/root/Downloads https://github.com/Kitware/CMake/releases/download/v3.23.0-rc1/cmake-3.23.0-rc1.tar.gz 
@@ -96,7 +93,14 @@ mkdir installers
 cd installers
 apt-get install -y kate gedit 
 apt-get install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common
-apt-get install -y r-base
+
+### install R
+apt-get install -y r-base 
+apt-get install -y r-cran-devtools
+apt-get install -y gdebi-core
+curl -o /root/persistent/rstudio-2022.02.3-492-amd64.deb https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.02.3-492-amd64.deb
+gdebi rstudio-2022.02.3-492-amd64.deb
+
 apt-get install -y git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
 git clone https://github.com/MRtrix3/mrtrix3.git
 cd mrtrix3
@@ -108,7 +112,7 @@ cd mrtrix3
 curl -o /root/persistent/fslinstaller602.py https://raw.githubusercontent.com/stijnimaging/installDSRIpod_neuroimg/main/fslinstaller602.py
 python2 /root/persistent/fslinstaller602.py
 
-# Extra for FSL
+# Make sure to add FSL environment in ~/.bashrc 
 # FSLDIR=/root/installers/fsl
 # . ${FSLDIR}/etc/fslconf/fsl.sh
 # PATH=${FSLDIR}/bin:${PATH}
