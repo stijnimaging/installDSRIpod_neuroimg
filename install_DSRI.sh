@@ -63,6 +63,7 @@ apt-get install -y unzip
 apt-get install -y uuid-dev 
 apt-get install -y vim-common 
 apt-get install -y zlib1g-dev
+apt-get install -y python3-distutils
 
 add-apt-repository ppa:linuxuprising/libpng12
 apt-get install -y libpng12-0
@@ -77,6 +78,7 @@ pip3 install --upgrade numpy
 apt-add-repository universe
 apt update
 apt install -y python2-minimal
+
 
 
 # ##install cmake
